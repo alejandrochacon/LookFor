@@ -1,0 +1,11 @@
+#
+# Die .htaccess Datei schreibt dem Apache Webserver vor, wie er mit Requests auf
+# die Webapplikation umgehen soll.
+#
+# Für das MVC wird mit Hilfe der RewriteEnging die URI des jeweiligen Requests
+# angeschaut und allenfalls auf eine andere Datei umgeleitet.
+
+# Schalte die RewriteEngine ein
+RewriteEngine On
+
+Require all granted
