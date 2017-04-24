@@ -16,45 +16,43 @@
                 </span>
             </div>
              <ul>
-                 <div class="video" img >  <li>
+                 <div class="video"> <li> <a href="/">
                          <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
+                 <div class="video"> <li> <a href="/">
+                             <img id="thumbnails" src="images/placeholder.svg" width="250px">
+                         </a> </li> </div>
 
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
-                 <div class="video" img >  <li>
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                     </li></div>
 
              </ul>
          </div>
