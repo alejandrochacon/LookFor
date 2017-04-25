@@ -43,9 +43,8 @@ class DefaultController
     }
     public function suche(){
         $sucheingabe=$_POST['searchbar'];
-        $view = new View('search_index');
-        $view->title = 'Look For';
-        $view->heading = 'Look For';
-        $view->display();
+        DefaultController::index();
+        
+
     }
 }
