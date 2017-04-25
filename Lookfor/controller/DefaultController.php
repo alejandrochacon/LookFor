@@ -1,4 +1,5 @@
 <?php
+    require_once'../repository/defaultRepository';
 
 /**
  * Der Controller ist der Ort an dem es für jede Seite, welche der Benutzer
@@ -24,6 +25,7 @@
  */
 class DefaultController
 {
+
     /**
      * Die index Funktion des DefaultControllers sollte in jedem Projekt
      * existieren, da diese ausgeführt wird, falls die URI des Requests leer
@@ -42,9 +44,14 @@ class DefaultController
         $view->display();
     }
     public function suche(){
-        $sucheingabe=$_POST['searchbar'];
-        DefaultController::index();
-        
-
+        $sucheingabe=htmlspecialchars($_POST['searchbar']);
+        $videoid = defaultRepository::getVideoId($sucheingabe);
+        $view = new View('search_index');
+        $view->title = 'Look For';
+        $view->heading = 'Look For';
+        $view->videoid=$videoid;
+        $view->display();
     }
+
+
 }
