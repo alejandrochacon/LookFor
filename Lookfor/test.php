@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $fbApp = new Facebook\FacebookApp(
   '1159851510827809',
@@ -58,6 +58,7 @@ $graphNode = $response->getGraphEdge();
 $nameResultSize = count($graphNode);
 
 //print_r($graphNode);
+$videoIdArray = new array();
 
 for($i = 0; $i < $nameResultSize; $i++){
   //echo ($graphNode[$i]['id']);
@@ -90,16 +91,19 @@ for($i = 0; $i < $nameResultSize; $i++){
   $channelvideosResultSize = count($graphNodeChannelvideos);
 
 
-  for($i = 0; $i < $channelvideosResultSize; $i++){
+  for($n = 0; $n < $channelvideosResultSize; $n++){
     //echo ($graphNode[$i]['id']);
     //echo '<br/>';
-    $videoId = $graphNode[$i]['id'];
+    $videoId = $graphNode[$n]['id'];
     echo "<h2>$videoId<h2>";
+    //in array füllen
 
 
 
   }
 }
+
+return $videoIdArray;
 
   /*
   //echo $graphNode['id'];
