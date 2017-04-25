@@ -20,69 +20,19 @@
             </div>
             </form>
              <ul>
-                 <!--div class="video"> <li> <a href="/">
-                         <img id="thumbnails" src="images/placeholder.svg" width="250px">
-                         </a> </li> </div-->
+                <?php
+               // foreach($i < $videoid i++){
+
+                //}
+                ?>
+                 <!--div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Freitag, 5. Dezember 2014</blockquote></div-->
                  <div class="video">
-                     <li>
-                 <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com" frameborder="0" allowfullscreen></iframe>
-                     </li>
+                 <li>
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F<?php echo $videoid?>%2F&width=500&show_text=false&appId=1159851510827809&height=197" width="350" height="197" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowfullscreen>
+                    </iframe>
+                 </li>
                  </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/kwGJxFhLM3E" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/BxsNnUAyfd4" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/pf4u4TuqcZU" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
-                 <div class="video">
-                     <li>
-                         <iframe id ="thumbnails" width="250px" height="166.66px" src="https://www.youtube.com/embed/Sagg08DrO5U" frameborder="0" allowfullscreen></iframe>
-                     </li>
-                 </div>
+
 
 
              </ul>
