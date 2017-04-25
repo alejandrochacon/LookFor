@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/autoload.php';
+require __DIR__ . 'vendor/autoload.php';
 
 $fbApp = new Facebook\FacebookApp(
   '1159851510827809',
@@ -59,7 +59,7 @@ $nameResultSize = count($graphNode);
 
 //print_r($graphNode);
 
-for($i = 0; $i < 1; $i++){
+for($i = 0; $i < $nameResultSize; $i++){
   //echo ($graphNode[$i]['id']);
   //echo '<br/>';
   $userId = $graphNode[$i]['id'];
