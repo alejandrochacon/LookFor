@@ -7,11 +7,11 @@ $fbApp = new Facebook\FacebookApp(
   );
 $appToken = 'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnphiNqEboyXUBs7nL8xTO34E9pFI9ZCFQAyIsAUeC95Tl831WRAZCuVvrEA89tsRxM5ZBhKKwhDBaEDLVc8YHsolRruLpZCMZBqAZD';
 //$aleToken = 'EAACEdEose0cBAPgWaLLF0v3KajlMn8ttZCzAQjQZAFHLXrfYonypG7Y7kAc2LKb5FsekgMEVD72ql7VBaNCApsRsv388XbXyeZCOWEnVZAxVnX3AbMZALtcP6T4rZAuXg7nYoTjE9QBYSMRFBMN1AmzhApbDBdjQBPQZB9CxLnbS1q3G9A93nlhZAEMdqAPnOCYZD';
-$nameSearchParam = "Marc Zuckerberg";
+$nameSearchParam = "srf";
 
 $expires = time() + 60 * 60 * 2;
 $accessTokenShort = new Facebook\Authentication\AccessToken($appToken, $expires);
-$limit = 500;
+$limit = 15;
 
 $fb = new \Facebook\Facebook([
   'app_id' => '1159851510827809',
@@ -33,7 +33,7 @@ $request = new Facebook\FacebookRequest(
   $fbApp,
   'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnphiNqEboyXUBs7nL8xTO34E9pFI9ZCFQAyIsAUeC95Tl831WRAZCuVvrEA89tsRxM5ZBhKKwhDBaEDLVc8YHsolRruLpZCMZBqAZD',
   'GET',
-  "/search?q=$nameSearchParam&type=user&limit=$limit&fields=id"
+  "/search?q=$nameSearchParam&type=page&fields=id"
 );
 
 //$videoIdArray
@@ -58,13 +58,13 @@ $graphNode = $response->getGraphEdge();
 $nameResultSize = count($graphNode);
 
 //print_r($graphNode);
-$videoIdArray = new array();
+$videoIdArray = array();
 
 for($i = 0; $i < $nameResultSize; $i++){
   //echo ($graphNode[$i]['id']);
   //echo '<br/>';
   $userId = $graphNode[$i]['id'];
-  echo "user id $userId";
+  //echo "user id $userId";
 
   $request = new Facebook\FacebookRequest(
     $fbApp,
@@ -94,16 +94,17 @@ for($i = 0; $i < $nameResultSize; $i++){
   for($n = 0; $n < $channelvideosResultSize; $n++){
     //echo ($graphNode[$i]['id']);
     //echo '<br/>';
-    $videoId = $graphNode[$n]['id'];
-    echo "<h2>$videoId<h2>";
+    $videoId = $graphNodeChannelvideos[$n]['id'];
+    array_push($videoIdArray, $videoId);
     //in array füllen
 
 
 
   }
-}
 
-return $videoIdArray;
+}
+print_r($videoIdArray);
+//return $videoIdArray;
 
   /*
   //echo $graphNode['id'];
