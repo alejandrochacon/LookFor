@@ -1,5 +1,5 @@
 <?php
-    require_once'../repository/defaultRepository';
+    require_once'../repository/defaultRepository.php';
 
 /**
  * Der Controller ist der Ort an dem es für jede Seite, welche der Benutzer
@@ -45,11 +45,12 @@ class DefaultController
     }
     public function suche(){
         $sucheingabe=htmlspecialchars($_POST['searchbar']);
-        $videoid = defaultRepository::getVideoId($sucheingabe);
+        $videoId[]=defaultRepository::getVideoId($sucheingabe);
+
         $view = new View('search_index');
         $view->title = 'Look For';
         $view->heading = 'Look For';
-        $view->videoid=$videoid;
+        $view->videoId=$videoId;
         $view->display();
     }
 

@@ -10,7 +10,7 @@ class defaultRepository
 {
     public function getVideoId($sucheingabe){
 
-require __DIR__ . '/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $fbApp = new Facebook\FacebookApp(
     '1159851510827809',
@@ -73,8 +73,8 @@ $nameResultSize = count($graphNode);
 for($i = 0; $i < 1; $i++){
     //echo ($graphNode[$i]['id']);
     //echo '<br/>';
-    $userId = $graphNode[$i]['id'];
-    echo "user id $userId";
+    $userId = $graphNode;
+    var_dump($userId);
 
     $request = new Facebook\FacebookRequest(
         $fbApp,
@@ -98,19 +98,24 @@ for($i = 0; $i < 1; $i++){
 
 
     $graphNodeChannelvideos = $response->getGraphEdge();
-    $channelvideosResultSize = count($graphNodeChannelvideos);
+
+    //$channelvideosResultSize = count($graphNodeChannelvideos);
 
 
-    for($i = 0; $i < $channelvideosResultSize; $i++){
+   // for($i = 0; $i < $channelvideosResultSize; $i++){
         //echo ($graphNode[$i]['id']);
         //echo '<br/>';
-        $videoId = $graphNode[$i]['id'];
-        return $videoId;
+     //   $videoId = $graphNode[$i]['id'];
+
 
 
 
     }
+        return $graphNodeChannelvideos;
+
+
 }
+
 
   /*
   //echo $graphNode['id'];
@@ -134,6 +139,7 @@ for($i = 0; $i < 1; $i++){
 
 
 
-}
+
+
 }
 
