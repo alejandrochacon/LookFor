@@ -57,8 +57,8 @@ class DefaultController
         }
         else {
             $view = new View('search_index');
-            $view->title = 'Look For';
-            $view->heading = 'Look For';
+            $view->title = 'LookFor';
+            $view->heading = 'LookFor';
             //$view->videoId=$videoId;
             $view->display();
         }
