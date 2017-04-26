@@ -17,7 +17,7 @@ $appToken = 'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnp
 
 $expires = time() + 60 * 60 * 2;
 $accessTokenShort = new Facebook\Authentication\AccessToken($appToken, $expires);
-$limit = 15;
+$limit = 6;
 
 $fb = new \Facebook\Facebook([
     'app_id' => '1159851510827809',

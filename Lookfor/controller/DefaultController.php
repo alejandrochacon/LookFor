@@ -44,16 +44,7 @@ class DefaultController
         $view->display();
     }
     public function suche(){
-<<<<<<< HEAD
-        $sucheingabe=htmlspecialchars($_POST['searchbar']);
-        //$videoId[]=defaultRepository::getVideoId($sucheingabe);
-        $view = new View('search_index');
-        $view->title = 'LookFor';
-        $view->heading = 'LookFor';
-        $view->sucheingabe=$sucheingabe;
-        //$view->videoId=$videoId;
-        $view->display();
-=======
+
         if (!empty($_POST['searchbar'])){
             $sucheingabe = htmlspecialchars($_POST['searchbar']);
             //$videoId[]=defaultRepository::getVideoId($sucheingabe);
@@ -72,7 +63,7 @@ class DefaultController
             $view->display();
         }
 
->>>>>>> origin/master
+
     }
 
 
