@@ -103,7 +103,7 @@ for($i = 0; $i < $nameResultSize; $i++){
   }
 
 }
-print_r($videoIdArray);
+return $videoIdArray;
 //return $videoIdArray;
 
   /*

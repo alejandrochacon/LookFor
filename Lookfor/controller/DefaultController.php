@@ -45,12 +45,12 @@ class DefaultController
     }
     public function suche(){
         $sucheingabe=htmlspecialchars($_POST['searchbar']);
-        $videoId[]=defaultRepository::getVideoId($sucheingabe);
-
+        //$videoId[]=defaultRepository::getVideoId($sucheingabe);
         $view = new View('search_index');
         $view->title = 'Look For';
         $view->heading = 'Look For';
-        $view->videoId=$videoId;
+        $view->sucheingabe=$sucheingabe;
+        //$view->videoId=$videoId;
         $view->display();
     }
 

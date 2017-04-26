@@ -1,16 +1,11 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: vmadmin
- * Date: 25.04.2017
- * Time: 15:20
- */
+
 class defaultRepository
 {
-    public function getVideoId($sucheingabe){
+    public static function getVideoId($sucheingabe){
 
-require __DIR__ . '/../vendor/autoload.php';
+require '../vendor/autoload.php';
 
 $fbApp = new Facebook\FacebookApp(
     '1159851510827809',
@@ -18,11 +13,11 @@ $fbApp = new Facebook\FacebookApp(
 );
 $appToken = 'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnphiNqEboyXUBs7nL8xTO34E9pFI9ZCFQAyIsAUeC95Tl831WRAZCuVvrEA89tsRxM5ZBhKKwhDBaEDLVc8YHsolRruLpZCMZBqAZD';
 //$aleToken = 'EAACEdEose0cBAPgWaLLF0v3KajlMn8ttZCzAQjQZAFHLXrfYonypG7Y7kAc2LKb5FsekgMEVD72ql7VBaNCApsRsv388XbXyeZCOWEnVZAxVnX3AbMZALtcP6T4rZAuXg7nYoTjE9QBYSMRFBMN1AmzhApbDBdjQBPQZB9CxLnbS1q3G9A93nlhZAEMdqAPnOCYZD';
-$nameSearchParam = $sucheingabe;
+
 
 $expires = time() + 60 * 60 * 2;
 $accessTokenShort = new Facebook\Authentication\AccessToken($appToken, $expires);
-$limit = 500;
+$limit = 15;
 
 $fb = new \Facebook\Facebook([
     'app_id' => '1159851510827809',
@@ -44,10 +39,9 @@ $request = new Facebook\FacebookRequest(
     $fbApp,
     'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnphiNqEboyXUBs7nL8xTO34E9pFI9ZCFQAyIsAUeC95Tl831WRAZCuVvrEA89tsRxM5ZBhKKwhDBaEDLVc8YHsolRruLpZCMZBqAZD',
     'GET',
-    "/search?q=$nameSearchParam&type=user&limit=$limit&fields=id"
+    "/search?q=$sucheingabe&type=page&fields=id"
 );
 
-//$videoIdArray
 
 //send name search request
 try {
@@ -62,19 +56,17 @@ try {
     exit;
 }
 
-//$graphNode = $response->getGraphNode();
 $graphNode = $response->getGraphEdge();
 
-//echo $graphNode;
 $nameResultSize = count($graphNode);
 
-//print_r($graphNode);
 
-for($i = 0; $i < 1; $i++){
-    //echo ($graphNode[$i]['id']);
-    //echo '<br/>';
-    $userId = $graphNode;
-    var_dump($userId);
+$videoIdArray = array();
+
+for($i = 0; $i < $nameResultSize; $i++){
+
+    $userId = $graphNode[$i]['id'];
+
 
     $request = new Facebook\FacebookRequest(
         $fbApp,
@@ -98,48 +90,23 @@ for($i = 0; $i < 1; $i++){
 
 
     $graphNodeChannelvideos = $response->getGraphEdge();
+    $channelvideosResultSize = count($graphNodeChannelvideos);
 
-    //$channelvideosResultSize = count($graphNodeChannelvideos);
 
+    for($n = 0; $n < $channelvideosResultSize; $n++){
 
-   // for($i = 0; $i < $channelvideosResultSize; $i++){
-        //echo ($graphNode[$i]['id']);
-        //echo '<br/>';
-     //   $videoId = $graphNode[$i]['id'];
-
+        $videoId = $graphNodeChannelvideos[$n]['id'];
+        array_push($videoIdArray, $videoId);
+        //in array füllen
 
 
 
     }
-        return $graphNodeChannelvideos;
+
+}
+return $videoIdArray;
 
 
 }
-
-
-  /*
-  //echo $graphNode['id'];
-  for($i = 0; $i < $nameResultSize; $i++){
-    //echo ($graphNode[$i]['id']);
-    //echo '<br/>';
-    $userId = $graphNode[$i]['id'];
-
-
-}
-
-//echo 'User name: ' . $graphNode['name'];
-//echo 'User id: ' . $graphNode['id'];
-//echo 'Video description: ' . $graphNode['description'];
-//echo '<br/>';
-//echo 'Video id: ' . $graphNode['id'];
-
-
-*/
-
-
-
-
-
-
 }
 
