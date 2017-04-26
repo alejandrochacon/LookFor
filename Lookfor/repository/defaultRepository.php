@@ -39,6 +39,7 @@ $request = new Facebook\FacebookRequest(
     $fbApp,
     'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnphiNqEboyXUBs7nL8xTO34E9pFI9ZCFQAyIsAUeC95Tl831WRAZCuVvrEA89tsRxM5ZBhKKwhDBaEDLVc8YHsolRruLpZCMZBqAZD',
     'GET',
+    "/search?q=$sucheingabe&type=page&limit=6&fields=id"
 );
 
 
@@ -71,6 +72,7 @@ for($i = 0; $i < $nameResultSize; $i++){
         $fbApp,
         'EAAQe4PlLiyEBAMxGhlxw0rZCgKWKwqEZAPZCmm1ZBhniNJXki0yikhPCqNpYyD2vnphiNqEboyXUBs7nL8xTO34E9pFI9ZCFQAyIsAUeC95Tl831WRAZCuVvrEA89tsRxM5ZBhKKwhDBaEDLVc8YHsolRruLpZCMZBqAZD',
         'GET',
+        "/$userId/videos?limit=5&fields=id"
     );
 
 
